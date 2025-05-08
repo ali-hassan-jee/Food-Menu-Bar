@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    background-color: #f6f0eb;
+
+    font-family: Poppins;
+
+}
+
+a {
+    text-decoration-line: none;
+}
+
+header {
+    /* border: 3px solid; */
+
+    height: 113px;
+    padding-inline: 2rem;
+    background-color: white;
+    /* border: 3px solid green; */
+}
+
+
+.header-content {
+    position: relative;
+    overflow-y: visible; /* Allows vertical overflow */
+    /* width: 100%; */
+    ;
+    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 113px;
+    overflow-x: hidden;
+
+}
+
+
+.hamburger-container {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -62px;
+    right: -62px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding-left: 1px;
+    display: none;
+
+}
+
+.hamburger-icon {
+    /* border: 5px solid black; */
+    margin-left: 15px;
+    margin-bottom: 13px;
+    ;
+}
+
+main {
+    /* background-color: #f5efeb; */
+    background-color: #f6f0eb;
+    /* height: 100vh; */
+
+}
+
+.logo-container {
+    margin-top: -15px;;
+    width: 50px;
+    height: 50px;
+}
+
+.logo-container img {
+    width: 100%;
+}
+
+nav a {
+    font-size: 20px;
+    color: #492118;
+    font-family: Poppins;
+    font-weight: 700;
+
+}
+.hide-hamburger{
+    visibility: hidden;
+}
+
+nav {
+    /* border: 2px solid; */
+    width: 955px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.09s ease-in-out;
+
+}
+nav span{
+    position: absolute;;
+    top:0.5rem;;
+    right: 1rem;;
+    display: none;;
+    cursor: pointer;
+}
+
+/* a:first-child{
+    padding-left: 12.5%;
+
+} */
+.hero-section {
+    width: 100%;
+    /* border: 3px solid blue; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.hero-image-container {
+    max-width: 1300px;
+    /* border: 3px solid yellow; */
+
+    /* margin: 0 auto; */
+    margin-top: 100px;
+    ;
+    margin-bottom: 23px;
+}
+
+.hero-image-container img {
+    /* border: 3px solid red; */
+    width: 100%;
+}
+
+.hero-section p {
+    color: #492118;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.main-section {
+    max-width: 960px;
+    margin-inline: auto;
+    /* border: 3px solid; */
+}
+
+.foodcard {
+    margin-top: 120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.foodcard img {
+    width: 100%;
+}
+
+.foodcard h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #492118;
+
+}
+
+.top {
+    margin-top: 80px;
+    font-weight: 700;
+    font-size: 2rem;
+    width: 71%;
+    text-align: right;
+    margin-inline: auto;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.made-with {
+    /* border: 2px solid; */
+    margin-top: 50px;
+    color: #858585;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    font-family: inherit;
+    padding-bottom: 30px;
+}
+
+@media (max-width:1200px) {
+    nav a {
+        font-size: 16px;
+    }
+
+    nav {
+
+        width: 750px;
+
+
+    }
+
+    header {
+        height: 100px;
+
+
+    }
+
+    .main-section,
+    .hero-section {
+        padding-inline: 25px;
+    }
+}
+
+@media (max-width:960px) {
+    nav a {
+        font-size: 12px;
+    }
+
+    nav {
+        width: 550px;
+    }
+
+    header {
+        height: 100px;
+    }
+
+    .hero-image-container {
+        margin-top: 33px;
+        ;
+
+    }
+
+    .foodcard h2 {
+        font-size: 2rem;
+
+    }
+
+    .foodcard {
+        margin-top: 60px;
+    }
+
+    .hero-section p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:768px) {
+
+
+    header {
+        background-color: rgba(246, 240, 235, 0.718);
+      
+        backdrop-filter: blur(8px);
+        padding-inline: 1rem;
+        padding-top: 15px;
+        /* border: 3px solid ; */
+        position: fixed;
+        /* 👈 fixed to top */
+        top: 0;
+        /* 👈 stick to the very top */
+        width: 100%;
+        /* 👈 take full width */
+        /* z-index: 1000; */
+        /* 👈 stay above other elements */
+    }
+    .logo-container {
+        margin-top:-8px;
+    }
+
+    .hamburger-container {
+        display: flex;
+    }
+
+    .header-content {
+        align-items: start;
+        min-height: 40px;
+    }
+
+    .hero-section,
+    .main-section {
+        margin-top: 70px;
+        /* 👈 push content down so it's not hidden behind the fixed header */
+    }
+    .hidden-navbar{
+        flex-direction: column;
+        gap: 1rem; /* Optional: space between stacked items */
+        width: 100%;  /* Expand to full width */
+        background-color: rgba(255, 255, 255, 0.897);
+        width: 200px;
+        padding:2rem;
+        position: fixed;      
+        right: -14rem;
+        top:1rem; 
+    
+    
+    }
+    .header-content {
+        align-items: start;
+        flex-direction: column;
+        min-height: 60px; /* Let content grow beyond this if needed */
+        padding-block: 0.5rem; /* Add some breathing room */
+        
+    }
+
+    .navbar{
+        
+
+        flex-direction: column;
+        gap: 1rem; /* Optional: space between stacked items */
+        width: 100%;  /* Expand to full width */
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 200px;
+        padding:2rem;
+        position: fixed;      
+        /* border: 3px solid; */
+        right: 1rem;
+        top:1rem; 
+
+    }
+    
+    .navbar span{
+        display: block;
+    }
+
+
+    .foodcard h2 {
+        font-size: 14px;
+
+    }
+
+    .hero-section p {
+        font-size: 12px;
+    }
+
+    .logo-container {
+        width: 30px;
+    }
+
+    header {
+        height: 60px;
+    }
+
+    .top {
+        font-size: 1rem;
+    }
+
+    .made-with {
+        font-size: 14px;
+
+    }
+}
+
+@media (min-width: 769px) {
+    .hero-section,
+    .main-section {
+        margin-top: 0; /* Remove offset when header is not fixed */
+    }
+}
